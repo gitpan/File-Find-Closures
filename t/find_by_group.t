@@ -1,4 +1,5 @@
-# $Id: find_by_group.t,v 1.1 2004/09/30 06:10:17 comdog Exp $
+# $Id: find_by_group.t,v 1.2 2004/09/30 06:15:29 comdog Exp $
+use strict;
 
 use File::Find            qw(find);
 use File::Spec::Functions qw(curdir);

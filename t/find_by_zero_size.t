@@ -1,4 +1,4 @@
-# $Id: find_by_zero_size.t,v 1.1 2004/09/30 06:10:17 comdog Exp $
+# $Id: find_by_zero_size.t,v 1.2 2005/01/26 18:27:12 comdog Exp $
 use strict;
 
 use File::Find            qw(find);
@@ -39,7 +39,10 @@ foreach my $file ( @files )
 	is( -s $file, 0, "$file is zero bytes" );
 	}
 
-is( $files[0], 'pm_to_blib', "Found pm_to_blib" );
+my @found = grep /pm_to_blib/, @files;
+like( $found[0], qr/pm_to_blib/, "Found pm_to_blib" );
 
 is( scalar @$files, $expected_count, "Found five files" );
-is( $files->[0], 'pm_to_blib', "Found pm_to_blib" );
+@found = grep /pm_to_blib/, @$files;
+
+like( $found[0], qr/pm_to_blib/, "Found pm_to_blib" );
