@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.4 2004/07/04 17:04:17 comdog Exp $
+# $Id: Makefile.PL,v 1.1.1.1 2004/09/28 18:35:10 comdog Exp $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest";
