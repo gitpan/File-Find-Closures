@@ -1,23 +1,12 @@
-# $Id: Makefile.PL,v 1.1.1.1 2004/09/28 18:35:10 comdog Exp $
+# $Id: Makefile.PL,v 1.2 2007/01/10 05:59:22 comdog Exp $
 use ExtUtils::MakeMaker;
 
-eval "use Test::Manifest";
-
-unless( $@ )
-	{
-	* ExtUtils::MM_Any::test_via_harness = sub
-		{
-		my($self, $perl, $tests) = @_;
-		
-		return qq|\t$perl "-MTest::Manifest" | .
-			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
-			qq|'\$(INST_ARCHLIB)')"\n|;
-		}
-	}
+eval "use Test::Manifest 1.14";
 
 WriteMakefile(
 	'NAME'	       => 'File::Find::Closures',
 	'VERSION_FROM' => 'lib/Closures.pm',
+	'LICENSE'       => 'perl',
 
 	'PREREQ_PM'    => {
 		'File::Find' => '0',

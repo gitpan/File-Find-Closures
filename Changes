@@ -1,4 +1,12 @@
-# $Id: Changes,v 1.2 2004/09/30 06:12:08 comdog Exp $
+# $Id: Changes,v 1.4 2007/01/10 06:01:47 comdog Exp $
+
+1.05 - Wed Jan 10 00:01:41 2007
+	* updated copyright and license info
+	* no code changes, so no need to upgrade
+	* bumped version number to 1.x
+
+0.10_03 - Wed Jan 26 12:27:48 2005
+* small documentation and testing fix: no big whoop.
 
 0.010_01 - Thu Sep 30 01:10:59 2004
 * implemented find_by_ (name, regex, max_size, min_size, zero_size)
