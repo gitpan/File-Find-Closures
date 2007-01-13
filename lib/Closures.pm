@@ -1,4 +1,4 @@
-# $Id: Closures.pm,v 1.5 2007/01/10 05:59:22 comdog Exp $
+# $Id: Closures.pm,v 1.6 2007/01/13 20:55:52 comdog Exp $
 package File::Find::Closures;
 use strict;
 
@@ -10,7 +10,7 @@ use File::Basename qw(dirname);
 use File::Spec::Functions qw(canonpath no_upwards);
 use UNIVERSAL qw(isa);
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.5 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ m/ (\d+) \. (\d+) /xg;
 
 @EXPORT_OK   = qw(
 	find_regular_files
@@ -438,7 +438,7 @@ systems
 
 L<File::Find>
 
-Randal Schwartz's File::Finder, which does the same task, but
+Randal Schwartz's C<File::Finder>, which does the same task but
 differently.
 
 =head1 SOURCE AVAILABILITY

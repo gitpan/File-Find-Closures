@@ -1,4 +1,4 @@
-# $Id: find_by_regex.t,v 1.2 2004/09/30 06:15:29 comdog Exp $
+# $Id: find_by_regex.t,v 1.3 2007/01/13 20:55:52 comdog Exp $
 use strict;
 
 use File::Basename        qw(basename);
@@ -29,7 +29,7 @@ my $files = $reporter->();
 isa_ok( $files, 'ARRAY', "Gets anonymous array in scalar context" );
 
 is( scalar @files, $expected_count, "Found one file matching /$regex/" );
-is( $files[0], $name, "Found $name" );
+like( $files[0], qr/\Q$name/, "Found $name" );
 
 is( scalar @$files, $expected_count, "Found one file matching /$regex/" );
-is( $files->[0], $name, "Found $name" );
+like( $files->[0], qr/\Q$name/, "Found $name" );

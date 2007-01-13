@@ -1,4 +1,4 @@
-# $Id: find_by_group.t,v 1.2 2004/09/30 06:15:29 comdog Exp $
+# $Id: find_by_group.t,v 1.3 2007/01/13 20:55:52 comdog Exp $
 use strict;
 
 use File::Find            qw(find);
@@ -8,5 +8,8 @@ use Test::More tests => 2;
 
 use_ok( "File::Find::Closures" );
 
+{
+no warnings;
 ok( defined *File::Find::Closures::find_by_group{CODE}, 
 	"file_by_group is defined" );
+}
