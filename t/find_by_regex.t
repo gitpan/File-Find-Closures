@@ -1,4 +1,4 @@
-# $Id: find_by_regex.t,v 1.3 2007/01/13 20:55:52 comdog Exp $
+# $Id: find_by_regex.t 2052 2007-01-13 20:55:52Z comdog $
 use strict;
 
 use File::Basename        qw(basename);

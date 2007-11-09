@@ -1,4 +1,4 @@
-# $Id: compile.t,v 1.1.1.1 2004/09/28 18:35:10 comdog Exp $
+# $Id: compile.t 1501 2004-09-28 18:35:09Z comdog $
 BEGIN {
 	@classes = qw(File::Find::Closures);
 	}

@@ -1,12 +1,18 @@
-# $Id: Makefile.PL,v 1.2 2007/01/10 05:59:22 comdog Exp $
+# $Id: Makefile.PL 2372 2007-11-09 11:51:07Z comdog $
 use ExtUtils::MakeMaker;
+
+require 5.006;
 
 eval "use Test::Manifest 1.14";
 
 WriteMakefile(
 	'NAME'	       => 'File::Find::Closures',
+	'ABSTRACT'     => 'functions you can use with File::Find',
+
 	'VERSION_FROM' => 'lib/Closures.pm',
-	'LICENSE'       => 'perl',
+	'LICENSE'      => 'perl',
+	'AUTHOR'       => 'brian d foy <bdfoy@cpan.org>',
+
 
 	'PREREQ_PM'    => {
 		'File::Find' => '0',

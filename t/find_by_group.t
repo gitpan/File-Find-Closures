@@ -1,4 +1,4 @@
-# $Id: find_by_group.t,v 1.3 2007/01/13 20:55:52 comdog Exp $
+# $Id: find_by_group.t 2052 2007-01-13 20:55:52Z comdog $
 use strict;
 
 use File::Find            qw(find);
