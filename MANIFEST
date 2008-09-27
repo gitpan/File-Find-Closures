@@ -3,18 +3,21 @@ examples/README
 lib/Closures.pm
 LICENSE
 Makefile.PL
-MANIFEST			This list of files
+MANIFEST
 README
 t/compile.t
+t/find_by_directory_contains.t
 t/find_by_group.t
 t/find_by_max_size.t
 t/find_by_min_size.t
 t/find_by_name.t
 t/find_by_owner.t
 t/find_by_regex.t
+t/find_by_stat.t
 t/find_by_zero_size.t
+t/find_regular_files.t
 t/pod.t
 t/pod_coverage.t
-t/prereq.t
 t/test_manifest
+t/unimplemented.t
 META.yml                                 Module meta-data (added by MakeMaker)

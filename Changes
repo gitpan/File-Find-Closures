@@ -1,4 +1,7 @@
-# $Id: Changes 2373 2007-11-09 11:52:08Z comdog $
+# $Id$
+
+1.08 - Sat Sep 27 03:57:40 2008
+	* fixed find_by_directory_contains, which didn't do anything right.
 
 1.07 - Fri Nov  9 05:51:33 2007
 	* updates for the move from CVS to SVN, and latest kwalitee

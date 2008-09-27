@@ -1,4 +1,4 @@
-# $Id: Closures.pm 2372 2007-11-09 11:51:07Z comdog $
+# $Id$
 package File::Find::Closures;
 use strict;
 
@@ -13,7 +13,7 @@ use File::Basename qw(dirname);
 use File::Spec::Functions qw(canonpath no_upwards);
 use UNIVERSAL qw(isa);
 
-$VERSION = 1.07;
+$VERSION = '1.08';
 
 @EXPORT_OK   = qw(
 	find_regular_files
@@ -160,10 +160,20 @@ as any of the values in @names.
 
 sub find_by_directory_contains
 	{
-	my @files = ();
+	my @contains = @_;
+	my %contains = map { $_, 1 } @contains;
+	
+	my %files = ();
 
-	sub { push @files, dirname( canonpath( $File::Find::name ) ) },
-	sub { wantarray ? @files : [ @files ] }
+	sub { 
+		return unless exists $contains{$_};
+		my $dir = dirname( canonpath( $File::Find::name ) );
+			
+		$files{ $dir }++;
+		},
+
+
+	sub { wantarray ? ( keys %files ) : [ keys %files ] }
 	}
 
 =item find_by_name( @names );
@@ -205,9 +215,9 @@ sub find_by_regex
 	
 	my $regex = shift;
 	
-	unless( UNIVERSAL::isa( $regex, 'Regexp' ) )
+	unless( UNIVERSAL::isa( $regex, ref qr// ) )
 		{
-		Carp::carp "Argument must be a regular expression";
+		croak "Argument must be a regular expression";
 		}
 		
 	my @files = ();
@@ -443,13 +453,9 @@ differently.
 
 =head1 SOURCE AVAILABILITY
 
-This source is part of a SourceForge project which always has the
-latest sources in CVS, as well as all of the previous releases.
+This module is in Github:
 
-	http://sourceforge.net/projects/brian-d-foy/
-
-If, for some reason, I disappear from the world, one of the other
-members of the project can shepherd this module appropriately.
+	git://github.com/briandfoy/file-find-closures.git
 
 =head1 AUTHOR
 

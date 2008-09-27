@@ -1,4 +1,4 @@
-# $Id: compile.t 1501 2004-09-28 18:35:09Z comdog $
+# $Id$
 BEGIN {
 	@classes = qw(File::Find::Closures);
 	}

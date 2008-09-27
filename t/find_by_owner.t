@@ -1,4 +1,4 @@
-# $Id: find_by_owner.t 1507 2004-09-30 06:15:29Z comdog $
+# $Id$
 use strict;
 
 use File::Find            qw(find);

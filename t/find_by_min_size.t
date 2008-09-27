@@ -1,4 +1,4 @@
-# $Id: find_by_min_size.t 2052 2007-01-13 20:55:52Z comdog $
+# $Id$
 use strict;
 
 use File::Find            qw(find);

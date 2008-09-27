@@ -1,4 +1,4 @@
-# $Id: find_by_name.t 1504 2004-09-30 06:10:17Z comdog $
+# $Id$
 use strict;
 
 use File::Basename        qw(basename);
