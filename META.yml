@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                File-Find-Closures
-version:             1.08
+version:             1.09
 abstract:            functions you can use with File::Find
 license:             perl
 author:              
