@@ -1,9 +1,10 @@
 Changes
 examples/README
-lib/Closures.pm
+lib/File/Find/Closures.pm
 LICENSE
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
 README
 t/compile.t
 t/find_by_directory_contains.t
@@ -20,4 +21,5 @@ t/pod.t
 t/pod_coverage.t
 t/test_manifest
 t/unimplemented.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

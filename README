@@ -1,5 +1,3 @@
-$Id$
-
 You can install this using in the usual Perl fashion
 
 	perl Makefile.PL
@@ -15,7 +13,7 @@ the file, you can read it with perldoc.
 If you want to read it before you install it, you can use
 perldoc directly on the module file.
 
-	perldoc  lib/Closures.pm
+	perldoc  lib/File/Find/Closures.pm
 	
 This module is also in Github:
 

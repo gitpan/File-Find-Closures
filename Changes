@@ -1,12 +1,10 @@
 # $Id$
 
-1.09 - Sat Oct  4 12:48:06 2008
-	* Now requires 5.008. This probably still works on 5.6.2, so
-	if you want to use that, just don't run the tests since the
-	way I mocked a few things doesn't work in 5.6.
+1.10 - Fri Jan  3 14:12:45 2014
+	* Get rid of MYMETA
 
-1.08 - Sat Sep 27 03:57:40 2008
-	* fixed find_by_directory_contains, which didn't do anything right.
+1.08 - Wed Jul 18 18:24:46 2012
+	* Add the File::Spec::Functions prereq (RT #39826)
 
 1.07 - Fri Nov  9 05:51:33 2007
 	* updates for the move from CVS to SVN, and latest kwalitee
